@@ -1,13 +1,10 @@
 Doing:
-    - implement cookie storage and retrieval between visits
-    - put in a gutter on left and right when above certain screen size
-        - How to do breakpoints with styled-components?
 
 ToDo:
-    - Get lines from tin
     - Do we create an obnoxious "win" button that has a coresponding discord bot to do messages?
-    - add max width to bingocells (grid-column-max??)
-    - Create button to get new card
+    - improve scaling for ultrawides
+    - make smaller-count cards tighter together in the center
+        - or change the vh scale ration based on the size of the card
 
 
 Done:
@@ -23,3 +20,10 @@ Done:
         - database?
         - cookie?
         - don't at all and let people take pictures? kind of defeats the purpose
+    - implement cookie storage and retrieval between visits
+    - put in a gutter on left and right when above certain screen size
+        - How to do breakpoints with styled-components?
+    - Get lines from tin
+    - add max width to bingocells (grid-column-max??)
+    - Make cells scale square-ly
+    - Create button to get new card
