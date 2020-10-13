@@ -1,0 +1,25 @@
+Doing:
+    - implement cookie storage and retrieval between visits
+    - put in a gutter on left and right when above certain screen size
+        - How to do breakpoints with styled-components?
+
+ToDo:
+    - Get lines from tin
+    - Do we create an obnoxious "win" button that has a coresponding discord bot to do messages?
+    - add max width to bingocells (grid-column-max??)
+    - Create button to get new card
+
+
+Done:
+    - Create layout components
+    - cell
+    - card
+    - create mocked service to provide static PoC data
+        - How do we crowd-source the lines / ideas?
+        - pull from github repo?
+        - merge requests to add more ideas to it?
+    - How do we validate the crowd-sourced ideas so they aren't all total shit?
+    - figure out how to store the bingo cards after generation?
+        - database?
+        - cookie?
+        - don't at all and let people take pictures? kind of defeats the purpose
