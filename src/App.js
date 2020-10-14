@@ -11,11 +11,8 @@ import BingoCardGenerator from './components/BingoCardGenerator';
 function resetBingoWordsCookie(newSize = 0) {
   deleteCookie(wordsTrackingCookieName);
 
-  if(newSize != 0) {
-    var newBingoSheet = createNewBingoSheet(newSize);
-
-    setCookie(wordsTrackingCookieName, JSON.stringify(newBingoSheet));
-  }
+  if(newSize != 0)
+    createNewBingoSheet(newSize);
 
   //Do more than this - generate the thing, save it, and then reload maybe. Or better yet, create a function to cause a re-render
   window.location.reload();
@@ -27,21 +24,23 @@ function createNewBingoSheet(size) {
   var totalToTake = size * size;
   let wordsThing = randomizedWords.slice(0, totalToTake);
 
-  return wordsThing.map((x) => {
-      return { text: x, completed: false };
-  });
+  var result = wordsThing.map((x) => {
+    return { text: x, completed: false };
+  })
+  setCookie(wordsTrackingCookieName, JSON.stringify(result));
+  
+  return result;
 }
 
 function App() {
   
   let wordsMap;
-  //if document cookie
+  
   let cookieValue = getCookie(wordsTrackingCookieName);
   if(cookieValue != "") {
       wordsMap = JSON.parse(decodeURIComponent(cookieValue));
   }
   else {
-      //This should probably get moved up - it doesn't make sense to have it here
       wordsMap = createNewBingoSheet(defaultCellSize);
   }
 

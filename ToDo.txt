@@ -1,10 +1,12 @@
 Doing:
 
 ToDo:
+    - create either free or basically-free space in the middle. this would involve classifying certain things as "basically free" actions
     - Do we create an obnoxious "win" button that has a coresponding discord bot to do messages?
     - improve scaling for ultrawides
     - make smaller-count cards tighter together in the center
         - or change the vh scale ration based on the size of the card
+    - implement dark theme
 
 
 Done:
@@ -27,3 +29,4 @@ Done:
     - add max width to bingocells (grid-column-max??)
     - Make cells scale square-ly
     - Create button to get new card
+    - serialize to cookie when creating new bingo card
