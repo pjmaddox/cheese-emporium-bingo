@@ -23,7 +23,7 @@ const BingoCard = (props) => {
 
     const updateState = (currentState, cardIndexToToggle) => {
         currentState[cardIndexToToggle].completed = !currentState[cardIndexToToggle].completed;
-        setCookie(wordsTrackingCookieName, JSON.stringify(currentState));
+        window.localStorage.setItem(wordsTrackingCookieName, JSON.stringify(currentState));
         setCardState( [...currentState] );
     };
 

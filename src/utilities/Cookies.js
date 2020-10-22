@@ -18,10 +18,10 @@ export function setCookie(cname, cvalue, exdays = 0) {
     let expires = "";
     if (exdays != 0) {
         var d = new Date();
-        d.setTime(d.getTime() + (exdays*24*60*60*1000));
-        expires = "expires="+ d.toUTCString();
+        d.setFullYear(d.getFullYear() + 1);
+        expires = `expires=${d.toUTCString()};`;
     }
-    document.cookie = cname + "=" + cvalue + ";" + expires;
+    document.cookie = `${cname}=${cvalue};${expires}`;
   };
 
 export function deleteCookie(cookieName) {
